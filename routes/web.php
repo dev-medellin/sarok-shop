@@ -2,6 +2,8 @@
 
 use App\Livewire\Pages\{
     AboutUs,
+    CartView,
+    Checkout,
     ContactUs,
     Home,
     ProductPageDetails,
@@ -38,3 +40,5 @@ Route::get('/contact-us', ContactUs::class);
 Route::get('/email-verify/{token}', EmailVerify::class);
 Route::get('/logout', [Login::class, 'logout']);
 Route::get('/product/{id}', ProductPageDetails::class);
+Route::get('/checkout', Checkout::class);
+Route::get('/view-cart', CartView::class);

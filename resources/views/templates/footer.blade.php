@@ -8,9 +8,9 @@
             <div class="container">
                 <div class="copyright-text">
                     <p>
-                        &copy; 2023 <span> Furbar </span> Made with
+                        &copy; 2023 <span> SarokShop </span> Made with
                         <i class="fa fa-heart" aria-hidden="true"></i> by
-                        <a href="#">codecarnival</a>
+                        <a href="#">Artech Development</a>
                     </p>
                 </div>
             </div>

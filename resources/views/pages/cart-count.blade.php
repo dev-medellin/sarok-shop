@@ -55,7 +55,7 @@
                 </div>
             </div>
             <div class="checkout-btn">
-                <a href="checkout.html" class="btn btn-dark btn-hover-primary d-block">Checkout</a>
+                <a href="{{url('view-cart')}}" class="btn btn-dark btn-hover-primary d-block">Checkout</a>
             </div>
         </div>
     </div>

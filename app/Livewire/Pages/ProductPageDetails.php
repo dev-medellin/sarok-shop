@@ -37,7 +37,7 @@ class ProductPageDetails extends Component
         $this->quantityCount+=1;
       }
     }
-    
+
     public function goToAddCart($productID){
         $this->teest = $productID;
         if(Auth::user()){
