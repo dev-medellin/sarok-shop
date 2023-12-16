@@ -6,6 +6,7 @@ use App\Livewire\Pages\{
     Checkout,
     ContactUs,
     Home,
+    OrderComplete,
     ProductPageDetails,
     ShopList
 };
@@ -42,3 +43,4 @@ Route::get('/logout', [Login::class, 'logout']);
 Route::get('/product/{id}', ProductPageDetails::class);
 Route::get('/checkout', Checkout::class);
 Route::get('/view-cart', CartView::class);
+Route::get('/order-completed/{tracker_id}', OrderComplete::class);

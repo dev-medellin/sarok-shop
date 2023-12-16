@@ -10,5 +10,5 @@ class BillingShipmentModel extends Model
     use HasFactory;
 
     public $table = 'billing_shipment';
-    public $fillable = ['user_id','fname','lname','house_number','apartment','town_city','post_code','phone_contact','email','notes','payment'];
+    public $fillable = ['user_id','fname','lname','house_number','apartment','town_city','post_code','phone_contact','email','country','notes','payment'];
 }

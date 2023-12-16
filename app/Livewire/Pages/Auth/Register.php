@@ -29,6 +29,9 @@ class Register extends Component
 
     public function mount(Templates $templats){
         $this->temp = $templats->style();
+        if(Auth::check()){
+            redirect('/');
+        }
     }
 
     public function render()
@@ -36,7 +39,7 @@ class Register extends Component
         return view('pages.auth.register')
         ->layout('app',['data' => $this->temp]);
     }
-    
+
 
     public function updated($field){
         $this->validateOnly($field,[
@@ -54,7 +57,7 @@ class Register extends Component
             'email' => 'required|email',
             'password' => 'required|min:6',
         ]);
-    
+
         $inputs = [
             'fname' => $this->fname,
             'lname' => $this->lname,

@@ -15,6 +15,9 @@ class Login extends Component
 
     public function mount(Templates $templats){
         $this->temp = $templats->style();
+        if(Auth::check()){
+            redirect('/');
+        }
     }
 
     public function render()

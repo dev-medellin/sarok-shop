@@ -4,8 +4,16 @@
             <i class="pe-7s-shopbag"></i>
             <span class="number">{{$cartCount}}</span>
         </a>
-
         <div class="dropdown-menu dropdown-cart">
+            @if($cartCount == 0)
+                <div class="empty-cart text-center">
+                    <div class="empty-cart-img">
+                        <img src="assets/images/cart.png" alt="Cart" />
+                    </div>
+                    <p>Your cart is currently empty!</p>
+                    <a href="{{url('shop-list')}}" class="btn btn-primary btn-hover-dark"><i class="fa fa-angle-left"></i> Shop now!</a>
+                </div>
+            @else
             <div class="cart-content" id="cart-content">
                 <ul>
                     @foreach($cartInfo as $info)
@@ -57,6 +65,7 @@
             <div class="checkout-btn">
                 <a href="{{url('view-cart')}}" class="btn btn-dark btn-hover-primary d-block">Checkout</a>
             </div>
+            @endif
         </div>
     </div>
 </div>

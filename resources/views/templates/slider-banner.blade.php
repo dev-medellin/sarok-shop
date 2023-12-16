@@ -18,7 +18,7 @@
                                     Unique Furniture Style Design for Your
                                     Family
                                 </p>
-                                <a href="product-details.html" class="btn btn-primary btn-hover-dark btn-margin">purchase now</a>
+                                <a href="{{url('shop-list')}}" class="btn btn-primary btn-hover-dark btn-margin">purchase now</a>
                             </div>
                             <!-- Slider Content End -->
 
@@ -42,7 +42,7 @@
                                     Unique Furniture Style Design for Your
                                     Family
                                 </p>
-                                <a href="product-details.html" class="btn btn-primary btn-hover-dark btn-margin">purchase now</a>
+                                <a href="{{url('shop-list')}}" class="btn btn-primary btn-hover-dark btn-margin">purchase now</a>
                             </div>
                             <!-- Slider Content End -->
 
@@ -66,7 +66,7 @@
                                     Unique Furniture Style Design for Your
                                     Family
                                 </p>
-                                <a href="product-details.html" class="btn btn-primary btn-hover-dark btn-margin">purchase now</a>
+                                <a href="{{url('shop-list')}}" class="btn btn-primary btn-hover-dark btn-margin">purchase now</a>
                             </div>
                             <!-- Slider Content End -->
 

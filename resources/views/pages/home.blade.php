@@ -79,142 +79,31 @@
                         <div class="tab-pane fade show active" id="tab7">
                             <div class="swiper-container">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <!-- Single Product Start -->
-                                        <div class="single-product">
-                                            <a href="#"><img src="assets/images/product/product-07.jpg" width="270" height="303" alt="product" /></a>
-                                            <div class="product-content">
-                                                <h4 class="title">
-                                                    <a href="product-details.html">Wooden
-                                                        decorations</a>
-                                                </h4>
-                                                <div class="price">
-                                                    <span class="sale-price"
-                                                            >$240.00</span>
+                                    @foreach ($testDatas as $product)
+                                        <div class="swiper-slide">
+                                            <!-- Single Product Start -->
+                                            <div class="single-product">
+                                                <a href="{{url('product/'.$product->id)}}"><img src="{{asset('assets/images/saroks/'.$product->product_img.'.jpg')}}" style="height: 200px" alt="product" /></a>
+                                                <div class="product-content">
+                                                    <h4 class="title">
+                                                        <a href="{{url('product/'.$product->id)}}">{{$product->product_name}}</a>
+                                                    </h4>
+                                                    <div class="price">
+                                                        <span class="sale-price"
+                                                                >₱{{number_format($product->product_price, 2)}}</span>
+                                                    </div>
                                                 </div>
+                                                <ul class="product-meta">
+                                                    <li>
+                                                        <a class="action" href="{{url('product/'.$product->id)}}"><i
+                                                                    class="pe-7s-shopbag"
+                                                        ></i></a>
+                                                    </li>
+                                                </ul>
                                             </div>
-                                            <ul class="product-meta">
-                                                <li>
-                                                    <a class="action" data-bs-toggle="modal" data-bs-target="#quickView" href="#"><i
-                                                                class="pe-7s-search"
-                                                            ></i></a>
-                                                </li>
-                                                <li>
-                                                    <a class="action" href="#"><i
-                                                                class="pe-7s-shopbag"
-                                                            ></i></a>
-                                                </li>
-                                                <li>
-                                                    <a class="action" href="#"><i
-                                                                class="pe-7s-like"
-                                                            ></i></a>
-                                                </li>
-                                            </ul>
+                                            <!-- Single Product End -->
                                         </div>
-                                        <!-- Single Product End -->
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <!-- Single Product Start -->
-                                        <div class="single-product">
-                                            <a href="#"><img src="assets/images/product/product-08.jpg" width="270" height="303" alt="product" /></a>
-                                            <div class="product-content">
-                                                <h4 class="title">
-                                                    <a href="product-details.html">Herman Seater
-                                                        Sofa</a>
-                                                </h4>
-                                                <div class="price">
-                                                    <span class="sale-price"
-                                                            >$240.00</span>
-                                                </div>
-                                            </div>
-                                            <ul class="product-meta">
-                                                <li>
-                                                    <a class="action" data-bs-toggle="modal" data-bs-target="#quickView" href="#"><i
-                                                                class="pe-7s-search"
-                                                            ></i></a>
-                                                </li>
-                                                <li>
-                                                    <a class="action" href="#"><i
-                                                                class="pe-7s-shopbag"
-                                                            ></i></a>
-                                                </li>
-                                                <li>
-                                                    <a class="action" href="#"><i
-                                                                class="pe-7s-like"
-                                                            ></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!-- Single Product End -->
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <!-- Single Product Start -->
-                                        <div class="single-product">
-                                            <a href="#"><img src="assets/images/product/product-09.jpg" width="270" height="303" alt="product" /></a>
-                                            <div class="product-content">
-                                                <h4 class="title">
-                                                    <a href="product-details.html">Reece Seater
-                                                        Sofa</a>
-                                                </h4>
-                                                <div class="price">
-                                                    <span class="sale-price"
-                                                            >$240.00</span>
-                                                </div>
-                                            </div>
-                                            <ul class="product-meta">
-                                                <li>
-                                                    <a class="action" data-bs-toggle="modal" data-bs-target="#quickView" href="#"><i
-                                                                class="pe-7s-search"
-                                                            ></i></a>
-                                                </li>
-                                                <li>
-                                                    <a class="action" href="#"><i
-                                                                class="pe-7s-shopbag"
-                                                            ></i></a>
-                                                </li>
-                                                <li>
-                                                    <a class="action" href="#"><i
-                                                                class="pe-7s-like"
-                                                            ></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!-- Single Product End -->
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <!-- Single Product Start -->
-                                        <div class="single-product">
-                                            <a href="#"><img src="assets/images/product/product-10.jpg" width="270" height="303" alt="product" /></a>
-                                            <div class="product-content">
-                                                <h4 class="title">
-                                                    <a href="product-details.html">Round Swivel
-                                                        Chair</a>
-                                                </h4>
-                                                <div class="price">
-                                                    <span class="sale-price"
-                                                            >$240.00</span>
-                                                </div>
-                                            </div>
-                                            <ul class="product-meta">
-                                                <li>
-                                                    <a class="action" data-bs-toggle="modal" data-bs-target="#quickView" href="#"><i
-                                                                class="pe-7s-search"
-                                                            ></i></a>
-                                                </li>
-                                                <li>
-                                                    <a class="action" href="#"><i
-                                                                class="pe-7s-shopbag"
-                                                            ></i></a>
-                                                </li>
-                                                <li>
-                                                    <a class="action" href="#"><i
-                                                                class="pe-7s-like"
-                                                            ></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!-- Single Product End -->
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>

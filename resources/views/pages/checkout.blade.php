@@ -134,6 +134,11 @@
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="single-form">
+                                        <input type="text" placeholder="Country*" name="country" required />
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="single-form">
                                         <input type="text" placeholder="Postcode / ZIP" name="post_code" required />
                                     </div>
                                 </div>

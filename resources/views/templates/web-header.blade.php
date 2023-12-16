@@ -5,8 +5,8 @@
                 <div class="col-lg-3">
                     <!-- Header Logo Start -->
                     <div class="header-logo">
-                        <a href="index.html"><img src="{{url('assets/images/saroks/logo/sarok_logo.png')}}" 
-                        alt="Logo" style="height: 120px;width: 110px;"/></a>
+                        <a href="index.html"><img src="{{url('assets/images/saroks/logo/sarok_logo_2.png')}}"
+                        alt="Logo" /></a>
                     </div>
                     <!-- Header Logo End -->
                 </div>

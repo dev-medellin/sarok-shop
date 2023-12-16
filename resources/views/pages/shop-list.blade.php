@@ -47,7 +47,7 @@
                                             </h4>
                                             <div class="price">
                                                 <span class="sale-price"
-                                                        >₱{{$product['product_price']}}</span>
+                                                        >₱{{number_format($product['product_price'], 2)}}</span>
                                             </div>
                                         </div>
                                         <ul class="product-meta">
