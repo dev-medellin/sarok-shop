@@ -13,6 +13,8 @@ class CartCount extends Component
     public $cartCount = 0;
     public $cartInfo;
     public $total = 0;
+    public $subTotal = 0;
+
     public function render()
     {
         $this->getCartInfo();
@@ -20,7 +22,7 @@ class CartCount extends Component
         return view('pages.cart-count');
     }
 
-    #[On('cartGetCount')] 
+    #[On('cartGetCount')]
     public function getCartCount()
     {
         $this->cartCount = ShoppingCartModel::where('user_id', Auth::user()->id)->count();
@@ -32,7 +34,8 @@ class CartCount extends Component
                         ->leftJoin('product_list','product_list.id', '=', 'shopping_cart.product_id')
                         ->where('shopping_cart.user_id', Auth::user()->id)->get();
         foreach($this->cartInfo as $key){
-            $this->total += $key['product_price'] * $key['prodQuanty'];
+            $this->subTotal += $key['product_price'] * $key['prodQuanty'];
         }
+        $this->total = $this->subTotal;
     }
 }

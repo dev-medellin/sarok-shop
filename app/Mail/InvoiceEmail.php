@@ -27,7 +27,7 @@ class InvoiceEmail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Invoice Order ['.$this->data['order_tracker'].']',
+            subject: 'Invoice Order ['.$this->data['order_id'].']',
         );
     }
 

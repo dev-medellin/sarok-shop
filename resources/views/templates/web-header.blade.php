@@ -32,7 +32,7 @@
                                 <a class="action" href="#" role="button" data-bs-toggle="dropdown"><i class="pe-7s-user"></i></a>
                                 <ul class="dropdown-menu dropdown-profile">
                                     <li><a href="my-account.html">My Account</a></li>
-                                    <li><a href="checkout.html">Checkout</a></li>
+                                    <li><a href="{{url('/checkout')}}">Checkout</a></li>
                                     <li><a href="{{url('/logout')}}">Logout</a></li>
                                 </ul>
                             </div>

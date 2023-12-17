@@ -27,6 +27,10 @@ class Checkout extends Component
             session()->flash('message', 'Please login first.');
             redirect('/login');
         }
+        $check = ShoppingCartModel::where('user_id', Auth::user()->id)->get();
+        if(count($check) == 0){
+            redirect('/empty-cart');
+        }
     }
 
     public function render()
@@ -49,7 +53,7 @@ class Checkout extends Component
 
     public function billingForm($formData){
         if($this->shipPayment != null){
-            $this->cartCheckout = ShoppingCartModel::where('user_id', Auth::user()->id)->get();
+            $this->cartCheckout = ShoppingCartModel::getCart(Auth::user()->id);
             $formData['payment'] = $this->shipPayment;
             $savedBilling = BillingShipmentModel::updateOrCreate(['user_id' => Auth::user()->id],$formData);
             $order_id = substr(str_shuffle("0123456789"), 0, 11);
@@ -61,7 +65,7 @@ class Checkout extends Component
                 'payment' => $this->shipPayment,
                 'status' => 'shipment'
             ];
-            $orderDetails = OrderDetails::updateOrCreate(['user_id' => Auth::user()->id],$data);
+            $orderDetails = OrderDetails::create($data);
             if($orderDetails){
                 $deletedCart = ShoppingCartModel::where('user_id', Auth::user()->id)->delete();
                 if($deletedCart){
@@ -72,7 +76,7 @@ class Checkout extends Component
                         'house_number' => $orderDetails->house_number,
                         'town_city' => $orderDetails->town_city,
                         'country' => $orderDetails->country,
-                        'post_code' => $orderDetails->post_code,
+                        'postal_code' => $orderDetails->post_code,
                         'order_date' => date('F d, Y', strtotime($orderDetails->created_at)),
                         'cart_info' => $orderDetails->cart_details
                     ];

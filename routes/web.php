@@ -5,6 +5,7 @@ use App\Livewire\Pages\{
     CartView,
     Checkout,
     ContactUs,
+    EmptyCart,
     Home,
     OrderComplete,
     ProductPageDetails,
@@ -13,6 +14,7 @@ use App\Livewire\Pages\{
 use App\Livewire\Pages\Auth\{
     EmailVerify,
     Login,
+    MyAccount,
     Register
 };
 use Illuminate\Support\Facades\Route;
@@ -44,3 +46,5 @@ Route::get('/product/{id}', ProductPageDetails::class);
 Route::get('/checkout', Checkout::class);
 Route::get('/view-cart', CartView::class);
 Route::get('/order-completed/{tracker_id}', OrderComplete::class);
+Route::get('/empty-cart', EmptyCart::class);
+Route::get('/my-account', MyAccount::class);
